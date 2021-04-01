@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'helper';
+  theme:string= ''
+  constructor(public themeService:ThemeService){}
+  ngOnInit(): void {
+    this.theme = this.themeService.theme;
+  }
+  ngDoCheck() {
+    this.theme = this.themeService.theme;
+  }
 }

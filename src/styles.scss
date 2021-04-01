@@ -9,3 +9,25 @@
     font-family: 'Rubik', sans-serif;
 }
 
+
+.theme-light {
+    --blue: #143BA0;
+    --grey: #D2D8DF;
+    --green: #007D14;
+    --lightGrey: #F5F5F5;
+    --theme: #fff;
+    --lightblue: lightblue;
+    --white: white;
+    --black: black;
+    --transwhite: rgba(255, 255, 255, 0.925);
+}
+  .theme-dark {
+    --blue: rgb(226, 226, 226);
+    --grey: #424242;
+    --green: rgb(41, 68, 41);
+    --theme: black;
+    --lightblue: #191257;
+    --white: black;
+    --black: white;
+    --transwhite: rgba(24, 24, 24, 0.884);
+}
