@@ -1,0 +1,105 @@
+@import './../../varia.scss';
+
+.page-container {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .main-sec {
+        width: 100%;
+        min-height: 80vh;
+        background: url('./../../assets/img/map-with-gps-destination-point_34645-903.webp');
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    
+        .txt-container {
+            width: 50%;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.925);
+    
+            .main-title {
+                font-size: 35px;
+                margin-top: 10px;
+            }
+    
+            .main-txt {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            .links-container {
+                margin-bottom: 20px;
+                .mainlink {
+                    padding: 12px 30px;
+                    margin: 0 5px;
+                    border-radius: 30px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    transition: background-color 0.5s;
+                }
+                .mainlink:nth-of-type(1) {
+                    background-color: $blue;
+                    color: $lightGrey;
+                    &:hover {
+                        color: $blue;
+                        background-color: white;
+                    }
+                }
+                .mainlink:nth-of-type(2) {
+                    color: $blue;
+                    border: 1px solid $blue;
+                    &:hover {
+                        color: $lightGrey;
+                        border: none;
+                        background-color: $blue;
+                    }
+                }
+            }
+    
+            
+        }
+    }
+
+    .bottom-sec {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+        .bottom-txt {
+            padding: 0 10px;
+            margin: 20px 0;
+            border-left: $blackborder;
+        }
+        .copyright {
+            border: none;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .main-sec {
+            display: block;
+            .txt-container {
+                width: 100%;
+                margin: 0;
+                background-color: rgba(255, 255, 255, 0.938);
+
+                .main-title {
+                    font-size: 30px;
+                    margin: 10px;
+                }
+
+                .links-container {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}

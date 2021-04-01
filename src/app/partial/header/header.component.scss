@@ -1,0 +1,30 @@
+@import './../../../varia.scss';
+
+.header {
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 1px 9px grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar {
+        .navlist {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+            // .logo {
+            //     text-transform: uppercase;
+            // }
+
+            .navlink {
+                color: $blue;
+                padding: 10px 25px;
+                &:hover {
+                    background-color: lightblue;
+                }
+            }
+        }
+    }
+}
