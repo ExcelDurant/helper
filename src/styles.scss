@@ -19,7 +19,11 @@
     --lightblue: lightblue;
     --white: white;
     --black: black;
+    --darkgrey: rgb(32, 32, 32);
+    --lightblack: rgb(73, 73, 73);
     --transwhite: rgba(255, 255, 255, 0.925);
+    --crimsonbg: none;
+    --shadowcolor: rgb(190, 190, 190);
 }
   .theme-dark {
     --blue: rgb(226, 226, 226);
@@ -30,4 +34,8 @@
     --white: black;
     --black: white;
     --transwhite: rgba(24, 24, 24, 0.884);
+    --lightblack: rgb(214, 214, 214);
+    --darkgrey: rgb(236, 236, 236);
+    --crimsonbg: crimson;
+    --shadowcolor: none;
 }

@@ -8,17 +8,19 @@ import { ThemeService } from '../../services/theme.service';
 })
 export class HeaderComponent implements OnInit {
 
+  theme:string= '';
   constructor(private themeService:ThemeService) { }
 
   ngOnInit(): void {
   }
 
-  lightTheme() {
-    this.themeService.theme = "theme-light";
+  ngDoCheck() {
+    this.theme = this.themeService.theme;
   }
 
-  darkTheme() {
-    this.themeService.theme = "theme-dark";
+  changeTheme(theme:string) {
+    this.themeService.changeTheme(theme);
   }
+
 
 }

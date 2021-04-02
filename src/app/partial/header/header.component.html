@@ -5,7 +5,13 @@
             <li><a href="#" class="navlink">login</a></li>
             <li><a href="#" class="navlink">signup</a></li>
         </ul>
-        <button (click)="lightTheme()" class="toggle-theme">Light</button>
-        <button (click)="darkTheme()" class="toggle-theme">Dark</button>
+        <button *ngIf="theme == 'theme-dark'" 
+         (click)="changeTheme('theme-light')" class="toggle-theme">
+            <img src="./../../../assets/img/dark-removebg-preview.png" alt="" class="full-img">
+        </button>
+        <button *ngIf="theme == 'theme-light'"
+         (click)="changeTheme('theme-dark')" class="toggle-theme">
+         <img src="./../../../assets/img/light-removebg-preview.png" alt="" class="full-img">
+        </button>
     </nav>
 </header>
