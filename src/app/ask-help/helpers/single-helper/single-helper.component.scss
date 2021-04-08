@@ -1,0 +1,103 @@
+@import "./../../../../varia.scss";
+
+.helper {
+    width: 300px;
+    border: 1px solid var(--lightblack);
+    background-color: var(--white);
+}
+
+.domain-img-container {
+    width: 100%;
+    height: 150px;
+    background-color: var(--gray);
+    overflow: hidden;
+}
+
+.info-container {
+    width: 100%;
+
+    .profile {
+        display: flex;
+        .img-container {
+            width: 50px;
+            height: 50px;
+            border: $blackborder;
+            border-radius: 50%;
+        }
+        .txt-container {
+            margin-left: 2%;
+            .helper-name {
+                font-size: 20px;
+                color: var(--black);
+                font-weight: 500;
+                margin: 0;
+            }
+            .helper-domain {
+                margin: 0;
+                color: var(--lightblack);
+                font-size: 17px;
+            }
+            .rating {
+                color: var(--black);
+                &::before {
+                    content: '\f005';
+                    color: rgb(255, 217, 0);
+                }
+            }
+        }
+    }
+    // .info-row {
+    //     margin-left: 9%;
+    // }
+    .location {
+        color: var(--black);
+        margin: 0;
+        &::before {
+            content: '\f368';
+            color: var(--blue);
+        }
+    }
+    .language {
+        color: var(--black);
+        margin: 0;
+        &::before {
+            content: '\f0ac';
+            color: var(--blue);
+        }
+    }
+    .phone {
+        color: var(--black);
+        margin: 0;
+        &::before {
+            content: '\f098';
+            color: var(--green);
+        }
+    }
+    .tasks{
+        color: var(--black);
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .verified {
+        color: var(--blue);
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: var(--lightblue);
+        font-weight: 500;
+        border-left: 2px solid var(--blue);
+        &::before {
+            content: '\f058';
+            color: var(--blue);
+        }
+    }
+    .contact {
+        display: block;
+        width: 90%;
+        color: var(--green);
+        border: 1px solid var(--green);
+        text-align: center;
+        padding: 10px 0;
+        margin: 10px auto;
+        font-size: 20px;
+    }
+}

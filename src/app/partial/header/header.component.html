@@ -2,8 +2,8 @@
     <h1 class="logo">Ask4help</h1>
     <nav class="navbar">
         <ul class="navlist">
-            <li><a href="#" class="navlink">login</a></li>
-            <li><a href="#" class="navlink">signup</a></li>
+            <li><a href="#" routerLink="login" class="navlink">login</a></li>
+            <li><a href="#" routerLink="/signup" class="navlink">signup</a></li>
         </ul>
         <button *ngIf="theme == 'theme-dark'" 
          (click)="changeTheme('theme-light')" class="toggle-theme">

@@ -1,25 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 @import './varia.scss';
+
+
 
 * {
     padding: 0;
     margin: 0;
     outline: none;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    // font-family: 'Rubik', sans-serif;
 }
 
 
 .theme-light {
     --blue: #143BA0;
-    --grey: #D2D8DF;
+    --gray: #D2D8DF;
     --green: #007D14;
-    --lightGrey: #F5F5F5;
+    --lightGray: #F5F5F5;
     --theme: #fff;
     --lightblue: lightblue;
     --white: white;
     --black: black;
-    --darkgrey: rgb(32, 32, 32);
+    --darkgray: rgb(32, 32, 32);
     --lightblack: rgb(73, 73, 73);
     --transwhite: rgba(255, 255, 255, 0.925);
     --crimsonbg: none;
@@ -27,7 +31,7 @@
 }
   .theme-dark {
     --blue: rgb(226, 226, 226);
-    --grey: #424242;
+    --gray: #424242;
     --green: rgb(41, 68, 41);
     --theme: black;
     --lightblue: #191257;
@@ -35,7 +39,10 @@
     --black: white;
     --transwhite: rgba(24, 24, 24, 0.884);
     --lightblack: rgb(214, 214, 214);
-    --darkgrey: rgb(236, 236, 236);
+    --darkgray: rgb(236, 236, 236);
     --crimsonbg: crimson;
     --shadowcolor: none;
+    --lightGray: #1f1e1e;
 }
+
+

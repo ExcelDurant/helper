@@ -1,0 +1,33 @@
+@import './../../varia.scss'; 
+
+.page {
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.create-task-container {
+    width: 250px;
+    height: 200px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: var(--lightGray);
+
+    .greetings {
+        color: var(--darkgray);
+        font-size: 25px;
+    }
+    .create-txt {
+        color: var(--black);
+        font-size: 20px;
+    }
+    .create-link {
+        padding: 10px 25px;
+        color: var(--blue);
+        border: 1px solid var(--blue);
+    }
+}

@@ -24,7 +24,11 @@
             list-style: none;
             .navlink {
                 color: var(--blue);
-                padding: 10px 25px;
+                padding: 10px 35px;
+                font-size: 15px;
+                border: 1px solid var(--blue);
+                border-radius: 20px;
+                margin-right: 10px;
                 &:hover {
                     background-color: var(--lightblue);
                 }
