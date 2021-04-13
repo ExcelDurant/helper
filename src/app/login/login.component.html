@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="page">
+    <h2 class="main-title">login</h2>
+    <div class="form-container">
+        <form (ngSubmit)="login()" [formGroup]="loginForm" class="login-form">
+            <label for="email">email :</label>
+            <input type="email" name="email" id="email" required formControlName="email" >
+            <label for="password">password :</label>
+            <input type="password" name="password" id="password" required formControlName="password">
+            <button type="submit" class="login-btn" [disabled]="!loginForm.valid">login</button>
+            
+        </form>
+        <div class="social-sec">
+            <button class="google-btn social-btn" (click)="authService.GoogleAuth()"><span class="btn-txt google-txt">login with google</span></button>
+            <button class="facebook-btn social-btn"><span class="btn-txt facebook-txt">login with facebook</span></button>
+            <p class="redi-txt">not having an account? <a href="#" routerLink="/signup">create</a> an account now</p>
+        </div>
+    </div>
+</div>

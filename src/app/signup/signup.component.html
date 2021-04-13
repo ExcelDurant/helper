@@ -1,1 +1,21 @@
-<p>signup works!</p>
+<div class="page">
+    <h2 class="title">registration</h2>
+    <div class="form-container">
+        <form action="" class="signup-form" (ngSubmit)="signup()" [formGroup]="signupForm">
+            <input type="text" placeholder="First name" name="firstname" id="firstname" required formControlName= "firstName">
+            <input type="text" placeholder="Last name" name="lastname" id="lastname" required formControlName= "lastName">
+            <input type="tel" placeholder="telephone" name="telephone" id="telephone" required formControlName= "telephone">
+            <input type="email" placeholder="email" name="email" id="email" required formControlName="email">
+            <input type="password" placeholder="Password" name="password" id="password" required formControlName= "password">
+            <input type="password" placeholder="Confirm Password" name="password" id="password" required formControlName= "confirmPassword">
+            <button type="submit" class="signup-btn btn" [disabled]="!signupForm.valid">Create Account</button>
+            <p class="or">or</p>
+            
+        </form>
+        <div class="social-sec">
+            <button class="social-btn btn" (click)="authService.GoogleAuth()">sign up with google</button>
+            <button class="social-btn btn">sign up with facebook</button>
+            <p class="redi-txt">already have an account? <a href="#" routerLink="/login">login</a></p>
+        </div>
+    </div>
+</div>

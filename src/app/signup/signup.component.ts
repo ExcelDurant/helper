@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  signupForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    telephone: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl(''),
+    confirmPassword: new FormControl('')
+  });
+  
+  constructor(public authService:AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  signup() {
+    const pass = this.signupForm.value.password;
+    const confirmPass = this.signupForm.value.confirmPassword;
+    if(pass == confirmPass) {
+      console.log('passwords are identical');
+      this.authService.SignUp(this.signupForm.value.email, this.signupForm.value.confirmPassword);
+    } else {
+      console.log('passwords are not identical');
+      window.alert('passwords are not identical');
+    }
+    console.log(this.signupForm.value.password);
   }
 
 }

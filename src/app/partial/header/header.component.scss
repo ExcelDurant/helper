@@ -12,6 +12,7 @@
         color: var(--black);
         font-size: 30px;
         margin-left: 2%;
+        cursor: pointer;
     }
 
     .navbar {
@@ -29,10 +30,23 @@
                 border: 1px solid var(--blue);
                 border-radius: 20px;
                 margin-right: 10px;
+                cursor: pointer;
                 &:hover {
                     background-color: var(--lightblue);
                 }
             }
+            // .hide {
+            //     display: none;
+            // }
+            // .show {
+            //     display: inline-block;
+            // }
+            // .hidden {
+            //     display: none;
+            // }
+        }
+        .hide {
+            display: none;
         }
         .toggle-theme {
             display: inline-block;

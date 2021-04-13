@@ -1,9 +1,10 @@
 <header class="header">
-    <h1 class="logo">Ask4help</h1>
+    <h1 class="logo" routerLink="home">Ask4help</h1>
     <nav class="navbar">
         <ul class="navlist">
-            <li><a href="#" routerLink="login" class="navlink">login</a></li>
-            <li><a href="#" routerLink="/signup" class="navlink">signup</a></li>
+            <li><a href="#" routerLink="login" class="navlink" *ngIf="!logged">login</a></li>
+            <li><a href="#" routerLink="/signup" class="navlink" *ngIf="!logged">signup</a></li>
+            <li><a (click)="signOut()" class="navlink" *ngIf="logged">logout</a></li>
         </ul>
         <button *ngIf="theme == 'theme-dark'" 
          (click)="changeTheme('theme-light')" class="toggle-theme">
