@@ -11,9 +11,10 @@ export class HeaderComponent implements OnInit {
 
   theme:string= '';
   logged:boolean | undefined;
+  
   constructor(
     private themeService:ThemeService,
-    private authService:AuthService) { }
+    public authService:AuthService) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +22,7 @@ export class HeaderComponent implements OnInit {
   ngDoCheck() {
     this.theme = this.themeService.theme;
     this.logged = this.loggedIn();
+    console.log(this.logged);
   }
 
   changeTheme(theme:string) {
@@ -30,6 +32,7 @@ export class HeaderComponent implements OnInit {
   loggedIn() {
     return this.authService.isLoggedIn
   }
+
 
   signOut() {
     this.authService.SignOut();

@@ -2,8 +2,35 @@
 
 .page {
     width: 98%;
-    height: auto;
+    // height: auto;
     margin: 0 auto;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: flex-end;
+    .navlist {
+        display: flex;
+        justify-content: left;
+        list-style: none;
+        .navlink {
+            padding: 0 10px;
+            color: var(--lightblack);
+            // border-bottom: 2px solid var(--blue);
+
+            &:hover {
+                color: var(--blue);
+                border-bottom: 2px solid var(--blue);
+            }
+        }
+        .active {
+            color: var(--blue);
+            border-bottom: 2px solid var(--blue);
+        }
+    }
 }
 
 .create-task-container {

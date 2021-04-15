@@ -1,11 +1,17 @@
 <div class="full-page">
-    <app-job-map></app-job-map>
-    <app-jobs></app-jobs>
+    <div class="map-sec" id="map">
+        <app-job-map></app-job-map>
+    </div>
+    
+    <div class="jobs-sec" id="jobs">
+        <app-jobs></app-jobs>
+    </div>
+    
     <div class="mobile-footer-nav">
-        <a href="#" class="footer-link">
+        <a href="#map" class="footer-link">
             <i class="far fa-map"></i>
         </a>
-        <a href="#" class="footer-link">
+        <a href="#jobs" class="footer-link">
             <i class="fas fa-tasks"></i>
         </a>
     </div>

@@ -7,9 +7,9 @@ import { CreatedTasksComponent } from './created-tasks/created-tasks.component';
 
 const routes: Routes = [
   { path: '', component: AskHelpComponent },
-  { path:'helpers', component: HelpersComponent, outlet: 'askhelp'},
-  { path:'proposals', component: ProposalsComponent, outlet: 'askhelp'},
-  { path:'created-tasks', component: CreatedTasksComponent, outlet: 'askhelp'}
+  { path:'helpers', component: HelpersComponent, outlet: "outlet1"},
+  { path:'proposals', component: ProposalsComponent, outlet: "outlet1"},
+  { path:'created-tasks', component: CreatedTasksComponent, outlet: "outlet1"}
 ];
 
 @NgModule({

@@ -10,6 +10,7 @@ import { User } from "../services/user";
 })
 export class AuthService {
   userData: any; // Save logged in user data
+  logged: boolean = this.isLoggedIn;
 
   constructor(
     public afs: AngularFirestore,   // Inject Firestore service
@@ -22,11 +23,11 @@ export class AuthService {
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userData = user;
-        localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user') || '');
+        localStorage.setItem('user2', JSON.stringify(this.userData));
+        JSON.parse(localStorage.getItem('user2') || '{}');
       } else {
-        localStorage.setItem('user', '');
-        JSON.parse(localStorage.getItem('user') || '');
+        localStorage.setItem('user2', '{}');
+        JSON.parse(localStorage.getItem('user2') || '{}');
       }
     })
   }
@@ -70,8 +71,8 @@ export class AuthService {
 
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem('user') || '');
-    return (user !== '' && user.emailVerified !== false) ? true : false;
+    const user = JSON.parse(localStorage.getItem('user2') || '{}');
+    return (user !== '{}' && user.emailVerified !== false) ? true : false;
   }
 
   // Sign in with Google
@@ -85,7 +86,7 @@ export class AuthService {
     .then((result) => {
        this.ngZone.run(() => {
           this.router.navigate(['/ask-help']);
-          console.log(this.router.navigate);
+          console.log(this.userData);
         })
       this.SetUserData(result.user);
     }).catch((error) => {
@@ -113,8 +114,10 @@ export class AuthService {
   // Sign out 
   SignOut() {
     return this.afAuth.auth.signOut().then(() => {
-      localStorage.removeItem('user');
+      localStorage.removeItem('user2');
       this.router.navigate(['/home']);
+      console.log(this.userData);
+      this.logged = false;
     })
   }
 
