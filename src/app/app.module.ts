@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { PERSISTENCE } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -32,7 +33,7 @@ import { environment } from '../environments/environment';
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [{ provide: PERSISTENCE, useValue: 'session' } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
