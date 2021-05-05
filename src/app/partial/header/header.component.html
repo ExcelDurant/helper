@@ -2,10 +2,10 @@
     <h1 class="logo" routerLink="home">Ask4help</h1>
     <nav class="navbar">
         <ul class="navlist">
-            <li><p *ngIf="authService.userData as user" class="navuser iconing-right">Hello {{ user.displayName }}</p></li>
+            <li><p *ngIf="authService.user as user" class="navuser iconing-right">Hello {{ user.displayName }}</p></li>
             <li><a href="#" routerLink="login" class="navlink" *ngIf="!logged">login</a></li>
             <li><a href="#" routerLink="/signup" class="navlink" *ngIf="!logged">signup</a></li>
-            <li><a (click)="signOut()" class="navlink" *ngIf="logged">logout</a></li>
+            <li><a  class="navlink" (click)="signOut()" *ngIf="logged">logout</a></li>
         </ul>
         <button *ngIf="theme == 'theme-dark'" 
          (click)="changeTheme('theme-light')" class="toggle-theme">

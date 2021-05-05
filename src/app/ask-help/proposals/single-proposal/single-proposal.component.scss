@@ -2,14 +2,15 @@
 
 .proposal-container {
     display: flex;
-    width: 80%;
+    width: 90%;
     border: 1px solid var(--lightblack);
+    padding-bottom: 10px;
     .profile-pic-container {
-        width: 80px;
-        height: 60px;
+        width: 8%;
+        height: 70px;
         border: 1px solid var(--black);
         border-radius: 50%;
-        margin-right: 1%;
+        margin-right: 2%;
     }
     .main-column {
         width: auto;
@@ -28,6 +29,7 @@
 .basic {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     .helper-name {
         margin: 5px 0;
         color: var(--black);

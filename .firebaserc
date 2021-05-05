@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "helper-8002a": {
+      "hosting": {
+        "helper": [
+          "helper-8002a"
+        ]
+      }
+    }
+  }
+}

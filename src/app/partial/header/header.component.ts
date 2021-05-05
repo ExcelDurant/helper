@@ -17,25 +17,24 @@ export class HeaderComponent implements OnInit {
     public authService:AuthService) { }
 
   ngOnInit(): void {
+    this.logged = this.authService.logged;
   }
 
   ngDoCheck() {
     this.theme = this.themeService.theme;
-    this.logged = this.loggedIn();
-    console.log(this.logged);
+    // this.logged = this.loggedIn();
+    this.logged = this.authService.logged;
+    console.log('I m' + this.logged);
   }
 
   changeTheme(theme:string) {
     this.themeService.changeTheme(theme);
   }
 
-  loggedIn() {
-    return this.authService.isLoggedIn
-  }
-
 
   signOut() {
-    this.authService.SignOut();
+    this.authService.logout();
+    this.logged = false;
   }
 
 }

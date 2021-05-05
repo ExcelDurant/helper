@@ -1,20 +1,14 @@
 <div class="page">
-    <nav class="navbar">
-        <ul class="navlist">
-            <li><a href="#" routerLink="helpers" routerLinkActive="active" class="navlink">Helpers</a></li>
-            <li><a href="#" routerLink="proposals" routerLinkActive="active" class="navlink">Proposals</a></li>
-            <li><a href="#" routerLink="created-tasks" routerLinkActive="active" class="navlink">My created tasks</a></li>
-        </ul>
-    </nav>
-    <!-- <div class="create-task-container">
+   
+    <div class="create-task-container">
         <h2 class="greetings">Hi <span class="user">User</span></h2>
         <p class="create-txt">
             Get offers from helpers for your task
         </p>
-        <a href="#" class="create-link">Create a Task</a>
-    </div> -->
-    <!-- <app-helpers></app-helpers>
+        <a href="#" routerLink="create-task" class="create-link">Create a Task</a>
+    </div>
+    <app-helpers></app-helpers>
     <app-proposals></app-proposals>
-    <app-created-tasks></app-created-tasks> -->
+    <app-created-tasks></app-created-tasks>
     <router-outlet name="outlet1"></router-outlet>
 </div>

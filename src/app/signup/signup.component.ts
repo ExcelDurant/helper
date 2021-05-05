@@ -18,7 +18,7 @@ export class SignupComponent implements OnInit {
     confirmPassword: new FormControl('')
   });
   
-  constructor(public authService:AuthService) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -28,7 +28,7 @@ export class SignupComponent implements OnInit {
     const confirmPass = this.signupForm.value.confirmPassword;
     if(pass == confirmPass) {
       console.log('passwords are identical');
-      this.authService.SignUp(this.signupForm.value.email, this.signupForm.value.confirmPassword);
+      // this.authService.SignUp(this.signupForm.value.email, this.signupForm.value.confirmPassword);
     } else {
       console.log('passwords are not identical');
       window.alert('passwords are not identical');

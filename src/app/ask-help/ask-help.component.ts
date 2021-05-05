@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AskHelpComponent implements OnInit {
 
+  cars = ['mercedes', 'bmw', 'mazda', 'ferrari'];
   constructor() { }
 
   ngOnInit(): void {
+    localStorage.setItem('cars', JSON.stringify(this.cars));
+    localStorage.getItem('brand');
+    console.log(localStorage);
   }
-
 }
