@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
 
   theme:string= '';
   logged:boolean | undefined;
+  user:any
   
   constructor(
     private themeService:ThemeService,
@@ -25,6 +26,8 @@ export class HeaderComponent implements OnInit {
     // this.logged = this.loggedIn();
     this.logged = this.authService.logged;
     console.log('I m' + this.logged);
+    this.user = this.authService.user;
+    console.log(this.user);
   }
 
   changeTheme(theme:string) {

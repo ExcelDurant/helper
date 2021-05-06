@@ -8,7 +8,7 @@
             <input type="email" placeholder="email" name="email" id="email" required formControlName="email">
             <input type="password" placeholder="Password" name="password" id="password" required formControlName= "password">
             <input type="password" placeholder="Confirm Password" name="password" id="password" required formControlName= "confirmPassword">
-            <button type="submit" class="signup-btn btn" [disabled]="!signupForm.valid">Create Account</button>
+            <button type="submit" class="signup-btn btn" [class.disabled]="!signupForm.valid" [disabled]="!signupForm.valid">Create Account</button>
             <p class="or">or</p>
             
         </form>

@@ -11,6 +11,7 @@
     height: 150px;
     background-color: var(--gray);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .info-container {
@@ -23,9 +24,10 @@
         .img-container {
             width: 50px;
             height: 50px;
-            border: $blackborder;
+            border: 1px solid var(--gray);
             border-radius: 50%;
             margin-right: 2%;
+            overflow: hidden;
         }
         .txt-container {
             .helper-name {

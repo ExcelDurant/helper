@@ -24,11 +24,17 @@ export class SignupComponent implements OnInit {
   }
 
   signup() {
+    const firstName = this.signupForm.value.firstName;
+    const lastName = this.signupForm.value.lastName;
+    const displayName = firstName+' '+ lastName;
+    const telephone = this.signupForm.value.telephone;
+    const email = this.signupForm.value.email;
     const pass = this.signupForm.value.password;
     const confirmPass = this.signupForm.value.confirmPassword;
     if(pass == confirmPass) {
       console.log('passwords are identical');
-      // this.authService.SignUp(this.signupForm.value.email, this.signupForm.value.confirmPassword);
+      console.log(this.signupForm.value);
+      this.authService.emailSignUp(email, confirmPass, firstName, telephone);
     } else {
       console.log('passwords are not identical');
       window.alert('passwords are not identical');

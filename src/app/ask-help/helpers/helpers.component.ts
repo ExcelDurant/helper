@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Helper } from '../../services/shared/helper';
+import { HelpersService } from '../../services/helpers.service';
+import { Config } from 'protractor';
 
 @Component({
   selector: 'app-helpers',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpersComponent implements OnInit {
 
-  constructor() { }
+
+  helpers!: Helper[];
+
+  constructor( public helpersService:HelpersService) { }
 
   ngOnInit(): void {
+    this.getHelpers();
+  }
+
+  getHelpers() {
+    this.helpersService.getHelpers().subscribe((data) => {
+      console.log(data);
+      this.helpers = data;
+    })
   }
 
 }

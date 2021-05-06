@@ -52,6 +52,9 @@ input {
         border-radius: 20px;
         margin-top: 10px;
     }
+    .disabled {
+        cursor: none;
+    }
 
     .or {
         font-size: 40px;

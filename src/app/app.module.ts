@@ -16,6 +16,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { PERSISTENCE } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { environment } from '../environments/environment';
     AngularFireModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HttpClientModule
   ],
   providers: [{ provide: PERSISTENCE, useValue: 'session' } ],
   bootstrap: [AppComponent]

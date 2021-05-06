@@ -85,11 +85,14 @@ export class AuthService {
   }
 
   // singning up with email
-  emailSignUp(email:string, password:string) {
+  emailSignUp(email:string, password:string, firstName:string, telephone:number) {
     this.auth.createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // Signed in 
+
       this.user = userCredential.user;
+      // this.user.firstName = firstName;
+      // this.user.telephone = telephone;
       // ...
       // changes loggedIn status
       this.logged = true;

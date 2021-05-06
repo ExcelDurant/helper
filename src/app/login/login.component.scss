@@ -1,3 +1,5 @@
+@import './../../varia.scss';
+
 .page {
     width: 100%;
 }
@@ -23,19 +25,12 @@
 
 .btn-txt {
     position: relative;
-    &::before {
-        content: '';
-        background-size: cover;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        left: -40px;
-        top: -7px;
-    }
 }
 .google-txt {
     &::before {
-        background: url('./../../assets/img/google-logo.webp');
+        content: '\f1a0';
+        font-size: 30px;
+        bottom: 0;
     }
 }
 .facebook-txt {
@@ -89,6 +84,10 @@ p{
             border: none;
             font-size: 20px
         } 
+        .disabled {
+            color: rgb(55, 55, 112);
+            cursor: none;
+        }
 
         
     }

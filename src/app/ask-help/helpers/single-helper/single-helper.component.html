@@ -1,19 +1,23 @@
 <div class="helper">
-    <div class="domain-img-container"></div>
+    <div [routerLink]="['helper', helper.id]" class="domain-img-container">
+        <img src={{helper.work2}} alt="" class="full-img">
+    </div>
     <div class="info-container">
         <div class="row profile">
-            <div class="img-container"></div>
+            <div class="img-container">
+                <img src={{helper.profilePic}} alt="" class="full-img">
+            </div>
             <div class="txt-container">
-                <h3 class="helper-name">John Doe</h3>
+                <h3 class="helper-name">{{ helper.first_name }} {{ helper.last_name }}</h3>
                 <h4 class="helper-domain">plumber / plumbing</h4>
-                <p class="rating iconing-left">4.1/5 (300 reviews)</p>
+                <p class="rating iconing-left">{{helper.review}}/5 ({{helper.completedNum}} reviews)</p>
             </div>
         </div>
         <div class="info-row">
-            <p class="location iconing-left">Logpom, Douala Cameroon</p>
+            <p class="location iconing-left">{{helper.street}}, {{helper.city}} {{helper.country}}</p>
             <p class="language iconing-left">Languages: English, French</p>
-            <p class="phone iconing-left">+237 670 000 000</p>
-            <p class="tasks">Completed 358 tasks, created 3 tasks</p>
+            <p class="phone iconing-left">{{helper.phone}}</p>
+            <p class="tasks">Completed {{helper.completedNum}} tasks, {{helper.created_tasks}} created tasks</p>
             <a href="#" class="verified iconing-left">Verified account</a>
         </div>
         <a href="#" class="contact">contact</a>

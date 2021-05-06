@@ -1,10 +1,4 @@
 <h2 class="title">most popular helpers around you</h2>
 <div class="helpers-container">
-    <app-single-helper></app-single-helper>
-    <app-single-helper></app-single-helper>
-    <app-single-helper></app-single-helper>
-    <app-single-helper></app-single-helper>
-    <app-single-helper></app-single-helper>
-    <app-single-helper></app-single-helper>
-    <app-single-helper></app-single-helper>
+    <app-single-helper *ngFor="let helper of helpers" [helper]="helper"></app-single-helper>
 </div>

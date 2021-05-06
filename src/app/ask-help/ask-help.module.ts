@@ -9,11 +9,12 @@ import { ProposalsComponent } from './proposals/proposals.component';
 import { SingleProposalComponent } from './proposals/single-proposal/single-proposal.component';
 import { CreatedTasksComponent } from './created-tasks/created-tasks.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
+import { HelperDetailsComponent } from './helpers/helper-details/helper-details.component';
 
 
 
 @NgModule({
-  declarations: [AskHelpComponent, HelpersComponent, SingleHelperComponent, ProposalsComponent, SingleProposalComponent, CreatedTasksComponent, CreateTaskComponent],
+  declarations: [AskHelpComponent, HelpersComponent, SingleHelperComponent, ProposalsComponent, SingleProposalComponent, CreatedTasksComponent, CreateTaskComponent, HelperDetailsComponent],
   imports: [
     CommonModule,
     AskHelpRoutingModule

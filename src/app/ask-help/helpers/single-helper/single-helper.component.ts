@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Helper } from 'src/app/services/shared/helper';
 
 @Component({
   selector: 'app-single-helper',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-helper.component.scss']
 })
 export class SingleHelperComponent implements OnInit {
+
+  @Input()
+  helper!: Helper;
 
   constructor() { }
 
