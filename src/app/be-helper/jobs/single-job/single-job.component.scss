@@ -11,7 +11,8 @@
     padding: 5px;
 
     .job-img-container {
-        width: 200px;
+        width: 400px;
+        margin-right: 15px;
     }
 
     .job-details-container {
@@ -116,12 +117,10 @@
 
         .job-details-container {
             .row {
+                margin: 0 auto;
                 margin-bottom: 10px;
                 .helper-type {
                     font-size: 17px;
-                }
-                .price {
-                    margin-right: 3%;
                 }
             }
 

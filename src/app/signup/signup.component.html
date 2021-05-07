@@ -1,7 +1,7 @@
 <div class="page">
     <h2 class="title">registration</h2>
     <div class="form-container">
-        <form action="" class="signup-form" (ngSubmit)="signup()" [formGroup]="signupForm">
+        <form action="" class="signup-form" [formGroup]="signupForm" (ngSubmit)="signup()">
             <input type="text" placeholder="First name" name="firstname" id="firstname" required formControlName= "firstName">
             <input type="text" placeholder="Last name" name="lastname" id="lastname" required formControlName= "lastName">
             <input type="tel" placeholder="telephone" name="telephone" id="telephone" required formControlName= "telephone">

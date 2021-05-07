@@ -31,8 +31,35 @@
 
     <div class="form-container">
         <h2 class="form-title">Create new task</h2>
-        <form action="" class="task-form">
-            
+        <form action="" class="task-form" [formGroup]="taskForm" (ngSubmit)="createTask()">
+            <label for="task-name" class="label">Task name</label>
+            <input type="text" name="task-name" id="task-name" placeholder="Repair my car" class="task-name form-in" required formControlName= "taskName">
+            <label for="desc" class="label">Description</label>
+            <textarea name="desc" id="desc" placeholder="description" class="desc form-in" required formControlName= "description"></textarea>
+            <label for="category" class="label">Select task category</label>
+            <select name="category" id="category" class="category form-in" required formControlName= "category">
+                <option value="domestic help">domestic help</option>
+                <option value="repair help">repair help</option>
+                <option value="child care">child care</option>
+                <option value="kitchen help">kitchen help</option>
+            </select>
+            <label for="country" class="label">Address</label>
+            <input type="text" name="country" id="country" placeholder="country" class="country form-in" required formControlName= "country">
+            <input type="text" name="city" id="city" placeholder="city" class="country form-in" required formControlName= "city">
+            <input type="text" name="street" id="street" placeholder="street" class="country form-in" required formControlName= "street">
+            <div class="location-sec">
+                <div>
+                    <label for="date" class="label">Date</label>
+                    <input type="date" name="date" id="date" class="date form-in" required formControlName= "date">
+                </div>
+                <div>
+                    <label for="time" class="label">Time</label>
+                    <input type="time" name="time" id="time" class="time form-in" required formControlName= "time">
+                </div>
+            </div>
+            <label for="reward" class="label">Reward</label>
+            <input type="number" name="reward" id="reward" placeholder="FCFA" class="reward form-in" required formControlName= "reward">
+            <button type="submit" class="submit-btn" [disabled]="!taskForm.valid">create task</button>
         </form>
     </div>
 </div>

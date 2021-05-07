@@ -19,15 +19,16 @@ export class HelperDetailsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    // this.getHelper();
+    this.getHelper();
+    console.log(this.helper);
   }
 
-  // getHelper() {
-  //   const id = this.activatedRoute.snapshot.paramMap.get('id');
-  //   console.log(id);
-  //   this.helpersService.getHelper(id).subscribe((data:any) => {
-  //     this.helper = data[0];
-  //   });
-  // }
+  getHelper() {
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    console.log(id);
+    this.helpersService.getHelper(id).subscribe((data:any) => {
+      this.helper = data[0];
+    });
+  }
 
 }

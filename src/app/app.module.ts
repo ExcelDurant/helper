@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule, AngularFireList} from '@angular/fire/database';
 import { PERSISTENCE } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireDatabaseModule,
     HttpClientModule
   ],
   providers: [{ provide: PERSISTENCE, useValue: 'session' } ],

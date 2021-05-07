@@ -37,6 +37,7 @@
     .rating {
         margin: 0;
         margin-bottom: 5px;
+        color: var(--black);
         &::before {
             content: '\f005';
             color: rgb(255, 217, 0);

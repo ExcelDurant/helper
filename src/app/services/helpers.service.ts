@@ -10,6 +10,7 @@ import { catchError, retry } from 'rxjs/operators';
 export class HelpersService {
 
   private helpers_api = 'http://localhost:8000/data';
+  private limit = '?_limit=20';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -32,7 +33,7 @@ export class HelpersService {
   }
 
   getHelpers() {
-    return this.httpClient.get<Helper[]>(this.helpers_api).pipe(
+    return this.httpClient.get<Helper[]>(this.helpers_api+this.limit).pipe(
       retry(3), // retry a failed request up to 3 times
       catchError(this.handleError) // then handle the error
     );

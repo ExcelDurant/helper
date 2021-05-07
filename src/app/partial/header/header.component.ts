@@ -25,9 +25,9 @@ export class HeaderComponent implements OnInit {
     this.theme = this.themeService.theme;
     // this.logged = this.loggedIn();
     this.logged = this.authService.logged;
-    console.log('I m' + this.logged);
+    // console.log('I m' + this.logged);
     this.user = this.authService.user;
-    console.log(this.user);
+    // console.log(this.user);
   }
 
   changeTheme(theme:string) {

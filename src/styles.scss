@@ -25,6 +25,7 @@ a {
     --lightGray  : #F5F5F5;
     --theme      : #fff;
     --lightblue  : lightblue;
+    --verylightblue: rgba(224, 241, 247, 0.527);
     --white      : white;
     --black      : black;
     --darkgray   : rgb(32, 32, 32);
@@ -33,6 +34,7 @@ a {
     --crimsonbg  : none;
     --shadowcolor: rgb(190, 190, 190);
     --lightborder: rgb(196, 196, 196);
+    --taskbtn: rgb(1, 192, 255);
 }
 
 .theme-dark {
@@ -41,6 +43,7 @@ a {
     --green      : rgb(41, 68, 41);
     --theme      : black;
     --lightblue  : #191257;
+    --verylightblue: rgb(212, 223, 226);
     --white      : black;
     --black      : rgb(206, 206, 206);
     --transwhite : rgba(24, 24, 24, 0.884);
@@ -50,4 +53,5 @@ a {
     --shadowcolor: rgb(61, 61, 61);
     --lightGray  : #1f1e1e;
     --lightborder: rgb(143, 142, 142);
+    --taskbtn: rgb(18, 18, 92);
 }

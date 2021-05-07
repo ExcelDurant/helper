@@ -11,13 +11,17 @@ import { CreatedTasksComponent } from './created-tasks/created-tasks.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { HelperDetailsComponent } from './helpers/helper-details/helper-details.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [AskHelpComponent, HelpersComponent, SingleHelperComponent, ProposalsComponent, SingleProposalComponent, CreatedTasksComponent, CreateTaskComponent, HelperDetailsComponent],
   imports: [
     CommonModule,
-    AskHelpRoutingModule
+    AskHelpRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AskHelpModule { }
