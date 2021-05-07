@@ -2,7 +2,7 @@ $blue: #143BA0;
 $grey: #D2D8DF;
 $green: #007D14;
 $lightGrey: #F5F5F5;
-$blackborder: 1px solid black;
+$blackborder: 1px solid var(--black);
 
 a {
     display: inline-block;

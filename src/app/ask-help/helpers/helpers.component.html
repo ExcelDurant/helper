@@ -1,4 +1,10 @@
 <h2 class="title">most popular helpers around you</h2>
 <div class="helpers-container">
+    <!-- loader when no helper is displayed -->
+    <div class="load-container" *ngIf="!helpers">
+        <h4 class="load-txt">loading helpers.......</h4>
+        <div class="donutSpinner"></div>
+    </div>
+    
     <app-single-helper *ngFor="let helper of helpers" [helper]="helper"></app-single-helper>
 </div>
