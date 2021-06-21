@@ -19,39 +19,39 @@ a {
 }
 
 .theme-light {
-    --blue       : #143BA0;
-    --gray       : #D2D8DF;
-    --green      : #007D14;
-    --lightGray  : #F5F5F5;
-    --theme      : #fff;
-    --lightblue  : lightblue;
+    --blue         : #143BA0;
+    --gray         : #D2D8DF;
+    --green        : #007D14;
+    --lightGray    : #F5F5F5;
+    --theme        : #fff;
+    --lightblue    : lightblue;
     --verylightblue: rgba(224, 241, 247, 0.527);
-    --white      : white;
-    --black      : black;
-    --darkgray   : rgb(32, 32, 32);
-    --lightblack : rgb(73, 73, 73);
-    --transwhite : rgba(255, 255, 255, 0.925);
-    --crimsonbg  : none;
-    --shadowcolor: rgb(190, 190, 190);
-    --lightborder: rgb(196, 196, 196);
-    --taskbtn: rgb(1, 192, 255);
+    --white        : white;
+    --black        : black;
+    --darkgray     : rgb(32, 32, 32);
+    --lightblack   : rgb(73, 73, 73);
+    --transwhite   : rgba(255, 255, 255, 0.925);
+    --crimsonbg    : none;
+    --shadowcolor  : rgb(190, 190, 190);
+    --lightborder  : rgb(196, 196, 196);
+    --taskbtn      : rgb(1, 192, 255);
 }
 
 .theme-dark {
-    --blue       : blueviolet;
-    --gray       : #424242;
-    --green      : rgb(41, 68, 41);
-    --theme      : black;
-    --lightblue  : #191257;
+    --blue         : blueviolet;
+    --gray         : #424242;
+    --green        : rgb(41, 68, 41);
+    --theme        : black;
+    --lightblue    : #191257;
     --verylightblue: rgb(212, 223, 226);
-    --white      : black;
-    --black      : rgb(206, 206, 206);
-    --transwhite : rgba(24, 24, 24, 0.884);
-    --lightblack : rgb(214, 214, 214);
-    --darkgray   : rgb(236, 236, 236);
-    --crimsonbg  : crimson;
-    --shadowcolor: rgb(61, 61, 61);
-    --lightGray  : #1f1e1e;
-    --lightborder: rgb(143, 142, 142);
-    --taskbtn: rgb(18, 18, 92);
+    --white        : black;
+    --black        : rgb(206, 206, 206);
+    --transwhite   : rgba(24, 24, 24, 0.884);
+    --lightblack   : rgb(214, 214, 214);
+    --darkgray     : rgb(236, 236, 236);
+    --crimsonbg    : crimson;
+    --shadowcolor  : rgb(61, 61, 61);
+    --lightGray    : #1f1e1e;
+    --lightborder  : rgb(143, 142, 142);
+    --taskbtn      : rgb(18, 18, 92);
 }
